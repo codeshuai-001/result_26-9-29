@@ -1,0 +1,131 @@
+===== train start 2026年 09月 28日 星期一 18:07:52 CST =====
+python=/root/AKCMamba_YOLO/venv/bin/python
+torch 2.5.1+cu121 cuda True Tesla V100-SXM2-32GB
+YOLOv8n summary: 225 layers, 3157200 parameters, 0 gradients, 8.9 GFLOPs
+New https://pypi.org/project/ultralytics/8.4.164 available 😃 Update with 'pip install -U ultralytics'
+Ultralytics YOLOv8.1.0 🚀 Python-3.10.12 torch-2.5.1+cu121 CUDA:0 (Tesla V100-SXM2-32GB, 32494MiB)
+engine/trainer: task=detect, mode=train, model=yolov8n.pt, data=/root/AKCMamba_YOLO/code/ultralytics/cfg/datasets/tlfo.yaml, epochs=100, time=None, patience=50, batch=32, imgsz=640, save=True, save_period=-1, cache=False, device=0, workers=8, project=/root/AKCMamba_YOLO/code/runs/detect, name=tlfo_yolov8n, exist_ok=True, pretrained=True, optimizer=auto, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=10, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=False, opset=None, workspace=4, nms=False, lr0=0.01, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, label_smoothing=0.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, mosaic=1.0, mixup=0.0, copy_paste=0.0, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=/root/AKCMamba_YOLO/code/runs/detect/tlfo_yolov8n
+Overriding model.yaml nc=80 with nc=4
+Model summary: 225 layers, 3011628 parameters, 3011612 gradients, 8.2 GFLOPs
+Transferred 319/355 items from pretrained weights
+Freezing layer 'model.22.dfl.conv.weight'
+AMP: running Automatic Mixed Precision (AMP) checks with YOLOv8n...
+AMP: checks passed ✅
+train: Scanning /root/AKCMamba_YOLO/datasets/github_raw/YOLO目标检测+输电线路异物数据集已标注可以直接使用（5000张图像+对应已标注文件）/labels/train... 2297 images, 0 backgrounds, 0 corrupt: 100%|██████████| 2297/2297 [00:03<00:00, 606.82it/s]
+train: New cache created: /root/AKCMamba_YOLO/datasets/github_raw/YOLO目标检测+输电线路异物数据集已标注可以直接使用（5000张图像+对应已标注文件）/labels/train.cache
+val: Scanning /root/AKCMamba_YOLO/datasets/github_raw/YOLO目标检测+输电线路异物数据集已标注可以直接使用（5000张图像+对应已标注文件）/labels/val... 2208 images, 0 backgrounds, 0 corrupt: 100%|█████████▉| 2208/2219 [00:04<00:00, 451.59it/s]
+val: Scanning /root/AKCMamba_YOLO/datasets/github_raw/YOLO目标检测+输电线路异物数据集已标注可以直接使用（5000张图像+对应已标注文件）/labels/val... 2219 images, 0 backgrounds, 0 corrupt: 100%|██████████| 2219/2219 [00:04<00:00, 526.27it/s]
+val: WARNING ⚠️ /root/AKCMamba_YOLO/datasets/github_raw/YOLO目标检测+输电线路异物数据集已标注可以直接使用（5000张图像+对应已标注文件）/images/val/nest_8.jpg: 1 duplicate labels removed
+val: New cache created: /root/AKCMamba_YOLO/datasets/github_raw/YOLO目标检测+输电线路异物数据集已标注可以直接使用（5000张图像+对应已标注文件）/labels/val.cache
+Plotting labels to /root/AKCMamba_YOLO/code/runs/detect/tlfo_yolov8n/labels.jpg...
+all       2219       2246      0.664     0.0542      0.079     0.0298
+all       2219       2246      0.695      0.185      0.179     0.0795
+all       2219       2246      0.632      0.122     0.0918     0.0337
+all       2219       2246      0.689      0.194      0.155     0.0558
+all       2219       2246      0.429       0.15      0.145      0.051
+all       2219       2246      0.791      0.197      0.219     0.0736
+all       2219       2246      0.374      0.227      0.259      0.097
+all       2219       2246      0.281      0.211      0.242      0.089
+all       2219       2246      0.218      0.219      0.195     0.0727
+all       2219       2246      0.239      0.167      0.141     0.0576
+all       2219       2246       0.22      0.156      0.127     0.0521
+all       2219       2246      0.226      0.214      0.155     0.0631
+all       2219       2246      0.263      0.276      0.284      0.106
+all       2219       2246      0.251      0.225      0.185     0.0777
+all       2219       2246      0.212      0.233      0.145     0.0689
+all       2219       2246      0.353       0.25      0.258     0.0974
+all       2219       2246      0.271      0.219      0.234      0.103
+all       2219       2246      0.779      0.248      0.263      0.114
+all       2219       2246      0.323      0.236      0.237      0.101
+all       2219       2246      0.379      0.233      0.284      0.126
+all       2219       2246      0.259      0.236      0.209      0.094
+all       2219       2246      0.319      0.242      0.274      0.123
+all       2219       2246      0.339      0.233      0.239     0.0996
+all       2219       2246       0.34      0.249      0.246      0.102
+all       2219       2246      0.378      0.267      0.311      0.127
+all       2219       2246      0.751      0.215      0.261      0.106
+all       2219       2246      0.288      0.253      0.247      0.111
+all       2219       2246      0.519      0.244      0.176     0.0739
+all       2219       2246      0.361      0.233      0.269       0.12
+all       2219       2246      0.561      0.254      0.227     0.0961
+all       2219       2246      0.824      0.225       0.27      0.102
+all       2219       2246      0.562       0.25       0.23      0.104
+all       2219       2246       0.57      0.263      0.398      0.145
+all       2219       2246      0.259      0.293      0.219     0.0997
+all       2219       2246      0.387      0.238       0.27      0.106
+all       2219       2246      0.575      0.243       0.28      0.113
+all       2219       2246      0.835      0.217       0.25      0.101
+all       2219       2246      0.542       0.25      0.243     0.0956
+all       2219       2246      0.814      0.202      0.223     0.0929
+all       2219       2246      0.844       0.26      0.307      0.132
+all       2219       2246      0.818       0.25      0.246       0.11
+all       2219       2246      0.743      0.273      0.247      0.101
+all       2219       2246      0.812      0.219      0.237     0.0971
+all       2219       2246      0.572      0.262      0.394       0.16
+all       2219       2246      0.809      0.231      0.342      0.138
+all       2219       2246      0.802      0.236      0.292      0.122
+all       2219       2246      0.506      0.248      0.224     0.0973
+all       2219       2246      0.529      0.224      0.209     0.0896
+all       2219       2246      0.503      0.264      0.322      0.143
+all       2219       2246      0.269      0.226      0.223     0.0979
+all       2219       2246      0.253      0.196      0.183     0.0855
+all       2219       2246      0.276      0.209      0.243      0.113
+all       2219       2246      0.366      0.232      0.266      0.121
+all       2219       2246      0.306      0.255      0.256      0.117
+all       2219       2246        0.3      0.232       0.22     0.0961
+all       2219       2246      0.343      0.203      0.257      0.114
+all       2219       2246      0.294       0.23      0.228      0.103
+all       2219       2246      0.821      0.211      0.263      0.118
+all       2219       2246      0.301       0.22      0.252      0.115
+all       2219       2246      0.568      0.214      0.244       0.11
+all       2219       2246      0.268       0.26      0.253      0.115
+all       2219       2246      0.296      0.244      0.247      0.105
+all       2219       2246      0.286      0.249      0.255       0.11
+all       2219       2246      0.289      0.208      0.221     0.0882
+all       2219       2246      0.292      0.254      0.242      0.113
+all       2219       2246      0.334      0.245      0.259       0.12
+all       2219       2246      0.286      0.265      0.247       0.11
+all       2219       2246       0.25      0.239      0.181     0.0829
+all       2219       2246      0.277       0.24      0.237       0.11
+all       2219       2246      0.272      0.294       0.25      0.121
+all       2219       2246      0.251      0.311      0.281      0.137
+all       2219       2246      0.301      0.247      0.259      0.119
+all       2219       2246      0.303      0.239      0.273      0.121
+all       2219       2246      0.312      0.213      0.258       0.11
+all       2219       2246       0.34      0.217      0.287      0.127
+all       2219       2246      0.352      0.229      0.287       0.13
+all       2219       2246      0.304      0.231      0.272       0.12
+all       2219       2246      0.288      0.235      0.261      0.113
+all       2219       2246      0.305      0.255      0.294      0.134
+all       2219       2246       0.28      0.254      0.241      0.105
+all       2219       2246      0.304      0.245      0.279      0.121
+all       2219       2246      0.307      0.226      0.275      0.124
+all       2219       2246      0.294      0.251      0.278      0.122
+all       2219       2246      0.302       0.24      0.275      0.122
+all       2219       2246      0.305       0.23      0.255      0.112
+all       2219       2246      0.307      0.231      0.278      0.122
+all       2219       2246      0.304      0.238      0.265      0.119
+all       2219       2246      0.315      0.228      0.267      0.122
+all       2219       2246      0.302      0.238      0.272      0.122
+all       2219       2246      0.313      0.242      0.295      0.134
+Closing dataloader mosaic
+all       2219       2246      0.273      0.233      0.228      0.102
+all       2219       2246      0.293      0.247       0.27      0.121
+all       2219       2246      0.277       0.24      0.251      0.114
+all       2219       2246      0.285      0.236      0.251      0.114
+Stopping training early as no improvement observed in last 50 epochs. Best results observed at epoch 44, best model saved as best.pt.
+To update EarlyStopping(patience=50) pass a new patience value, i.e. `patience=300` or use `patience=0` to disable EarlyStopping.
+94 epochs completed in 0.531 hours.
+Optimizer stripped from /root/AKCMamba_YOLO/code/runs/detect/tlfo_yolov8n/weights/last.pt, 6.3MB
+Optimizer stripped from /root/AKCMamba_YOLO/code/runs/detect/tlfo_yolov8n/weights/best.pt, 6.2MB
+Validating /root/AKCMamba_YOLO/code/runs/detect/tlfo_yolov8n/weights/best.pt...
+Ultralytics YOLOv8.1.0 🚀 Python-3.10.12 torch-2.5.1+cu121 CUDA:0 (Tesla V100-SXM2-32GB, 32494MiB)
+Model summary (fused): 168 layers, 3006428 parameters, 0 gradients, 8.1 GFLOPs
+all       2219       2246      0.572      0.262      0.395       0.16
+nest       2219        991      0.958      0.504      0.644      0.314
+kite       2219        527          1          0      0.501       0.15
+balloon       2219        189      0.331      0.545      0.433      0.177
+trash       2219        539          0          0          0          0
+Speed: 0.1ms preprocess, 0.5ms inference, 0.0ms loss, 0.7ms postprocess per image
+Results saved to /root/AKCMamba_YOLO/code/runs/detect/tlfo_yolov8n
+===== train end 2026年 09月 28日 星期一 18:40:29 CST exit=0 =====

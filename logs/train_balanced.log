@@ -1,0 +1,185 @@
+===== balanced train start 2026年 09月 29日 星期二 18:46:35 CST =====
+python=/root/AKCMamba_YOLO/venv/bin/python
+torch 2.5.1+cu121 cuda True Tesla V100-SXM2-32GB
+Downloading https://github.com/ultralytics/assets/releases/download/v8.1.0/yolov8s.pt to 'yolov8s.pt'...
+YOLOv8s summary: 225 layers, 11166560 parameters, 0 gradients, 28.8 GFLOPs
+New https://pypi.org/project/ultralytics/8.4.165 available 😃 Update with 'pip install -U ultralytics'
+Ultralytics YOLOv8.1.0 🚀 Python-3.10.12 torch-2.5.1+cu121 CUDA:0 (Tesla V100-SXM2-32GB, 32494MiB)
+engine/trainer: task=detect, mode=train, model=yolov8s.pt, data=/root/AKCMamba_YOLO/code/ultralytics/cfg/datasets/tlfo_balanced.yaml, epochs=150, time=None, patience=40, batch=32, imgsz=640, save=True, save_period=-1, cache=False, device=0, workers=8, project=/root/AKCMamba_YOLO/code/runs/detect, name=tlfo_yolov8s_balanced, exist_ok=True, pretrained=True, optimizer=AdamW, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=True, close_mosaic=20, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=False, opset=None, workspace=4, nms=False, lr0=0.001, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=1.0, dfl=1.5, pose=12.0, kobj=1.0, label_smoothing=0.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, mosaic=1.0, mixup=0.1, copy_paste=0.1, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=/root/AKCMamba_YOLO/code/runs/detect/tlfo_yolov8s_balanced
+Overriding model.yaml nc=80 with nc=4
+Model summary: 225 layers, 11137148 parameters, 11137132 gradients, 28.7 GFLOPs
+Transferred 349/355 items from pretrained weights
+Freezing layer 'model.22.dfl.conv.weight'
+AMP: running Automatic Mixed Precision (AMP) checks with YOLOv8n...
+AMP: checks passed ✅
+train: Scanning /root/AKCMamba_YOLO/datasets/tlfo_balanced/labels/train... 3612 images, 0 backgrounds, 0 corrupt: 100%|██████████| 3612/3612 [00:02<00:00, 1588.75it/s]
+train: New cache created: /root/AKCMamba_YOLO/datasets/tlfo_balanced/labels/train.cache
+val: Scanning /root/AKCMamba_YOLO/datasets/tlfo_balanced/labels/val... 904 images, 0 backgrounds, 0 corrupt: 100%|██████████| 904/904 [00:00<00:00, 1553.46it/s]
+val: WARNING ⚠️ /root/AKCMamba_YOLO/datasets/tlfo_balanced/images/val/nest_8.jpg: 1 duplicate labels removed
+val: New cache created: /root/AKCMamba_YOLO/datasets/tlfo_balanced/labels/val.cache
+Plotting labels to /root/AKCMamba_YOLO/code/runs/detect/tlfo_yolov8s_balanced/labels.jpg...
+all        904        915       0.76      0.554      0.639      0.359
+all        904        915      0.736        0.7      0.756      0.422
+all        904        915      0.865      0.742      0.855      0.495
+all        904        915      0.719      0.752       0.79      0.465
+all        904        915      0.846      0.806      0.894      0.527
+all        904        915      0.876      0.795      0.912      0.574
+all        904        915      0.901      0.866       0.92       0.56
+all        904        915      0.929      0.866      0.933      0.572
+all        904        915       0.95      0.873      0.944      0.607
+all        904        915      0.934      0.898      0.944        0.6
+all        904        915      0.943      0.895      0.943      0.609
+all        904        915      0.939      0.913      0.959      0.617
+all        904        915      0.943      0.887      0.955      0.614
+all        904        915      0.957      0.918      0.954      0.634
+all        904        915      0.933      0.919      0.961      0.621
+all        904        915      0.924      0.934      0.952      0.631
+all        904        915      0.966      0.927       0.97      0.643
+all        904        915      0.963      0.915      0.963      0.638
+all        904        915      0.937      0.937      0.961      0.638
+all        904        915      0.949       0.94      0.966      0.642
+all        904        915      0.964       0.92      0.966      0.662
+all        904        915      0.974      0.929      0.973       0.66
+all        904        915      0.984      0.944      0.973      0.659
+all        904        915      0.962      0.945      0.973      0.658
+all        904        915      0.969      0.927      0.962       0.66
+all        904        915       0.97      0.943      0.972      0.652
+all        904        915      0.957      0.937      0.965      0.638
+all        904        915      0.959      0.941       0.97      0.657
+all        904        915      0.983      0.955      0.984      0.676
+all        904        915      0.974      0.935       0.97      0.658
+all        904        915      0.975      0.933      0.976      0.679
+all        904        915      0.969      0.954      0.981      0.676
+all        904        915      0.968      0.928      0.965      0.661
+all        904        915      0.971      0.949      0.973      0.683
+all        904        915       0.97      0.946      0.969      0.668
+all        904        915      0.958      0.951      0.971      0.682
+all        904        915      0.958      0.964      0.984       0.68
+all        904        915      0.968      0.932      0.971      0.672
+all        904        915      0.972       0.95      0.975      0.679
+all        904        915      0.966      0.948      0.974      0.692
+all        904        915      0.972      0.944      0.973      0.686
+all        904        915      0.974      0.948      0.979      0.696
+all        904        915      0.965       0.95      0.975       0.69
+all        904        915      0.975      0.934      0.979      0.683
+all        904        915      0.966      0.945       0.97       0.69
+all        904        915      0.965       0.95      0.977      0.697
+all        904        915      0.984      0.957      0.983      0.706
+all        904        915       0.97      0.956      0.979      0.695
+all        904        915      0.975      0.949      0.975      0.694
+all        904        915      0.979      0.951       0.98      0.697
+all        904        915      0.971      0.958      0.974      0.692
+all        904        915      0.982      0.952      0.979      0.695
+all        904        915      0.984      0.946      0.977        0.7
+all        904        915      0.972      0.958      0.982      0.699
+all        904        915      0.975      0.953      0.976        0.7
+all        904        915      0.967       0.96      0.975      0.696
+all        904        915      0.989      0.955      0.979      0.692
+all        904        915      0.974      0.954      0.978      0.694
+all        904        915      0.974      0.948      0.972      0.699
+all        904        915      0.978      0.954      0.978      0.693
+all        904        915      0.974      0.961      0.978      0.695
+all        904        915      0.968      0.957      0.976      0.686
+all        904        915      0.985      0.953       0.98      0.707
+all        904        915      0.986      0.957      0.978        0.7
+all        904        915      0.984      0.952      0.978        0.7
+all        904        915      0.975      0.951      0.977      0.712
+all        904        915      0.972      0.956      0.978      0.711
+all        904        915      0.966      0.957       0.98      0.705
+all        904        915      0.977      0.955      0.983      0.711
+all        904        915      0.975      0.947      0.979      0.714
+all        904        915      0.979      0.958      0.983      0.705
+all        904        915      0.991      0.959       0.98      0.712
+all        904        915      0.989      0.952       0.98      0.705
+all        904        915      0.979      0.951      0.978      0.714
+all        904        915      0.981      0.954      0.977      0.705
+all        904        915      0.975      0.957      0.981      0.722
+all        904        915      0.983      0.959      0.983      0.711
+all        904        915      0.992       0.95      0.984      0.707
+all        904        915      0.981      0.957      0.983       0.72
+all        904        915      0.973      0.966      0.983      0.718
+all        904        915      0.988      0.959       0.98      0.714
+all        904        915      0.975      0.966      0.983      0.716
+all        904        915      0.986      0.959      0.979      0.715
+all        904        915      0.984      0.955      0.984      0.712
+all        904        915       0.98      0.964      0.982       0.72
+all        904        915      0.985      0.955       0.98      0.722
+all        904        915      0.988      0.967      0.984      0.724
+all        904        915      0.977      0.962      0.981      0.708
+all        904        915      0.986      0.961      0.984      0.729
+all        904        915      0.979      0.961      0.982      0.724
+all        904        915      0.988      0.958      0.982      0.719
+all        904        915      0.988      0.956      0.983      0.717
+all        904        915      0.993      0.968      0.984      0.728
+all        904        915      0.984      0.968      0.982      0.716
+all        904        915      0.983      0.964      0.981      0.719
+all        904        915      0.981      0.962      0.982      0.725
+all        904        915      0.976      0.962       0.98      0.722
+all        904        915      0.968      0.968      0.982      0.723
+all        904        915       0.98      0.961      0.981      0.722
+all        904        915       0.98      0.964      0.985      0.725
+all        904        915      0.983      0.958      0.981      0.727
+all        904        915      0.971      0.974      0.983      0.724
+all        904        915      0.982      0.962      0.983      0.729
+all        904        915      0.978      0.966      0.983      0.727
+all        904        915      0.987      0.963      0.982      0.729
+all        904        915      0.984      0.966      0.982      0.724
+all        904        915      0.986      0.966      0.982      0.727
+all        904        915      0.984      0.966      0.983      0.731
+all        904        915      0.987      0.968      0.986      0.731
+all        904        915      0.981      0.967      0.981      0.727
+all        904        915      0.985      0.968      0.982      0.728
+all        904        915      0.985      0.963      0.983      0.733
+all        904        915      0.986      0.968      0.983      0.732
+all        904        915      0.981      0.965      0.984      0.733
+all        904        915       0.99      0.962      0.984      0.734
+all        904        915      0.991      0.964      0.984      0.731
+all        904        915      0.986      0.964      0.983      0.732
+all        904        915      0.989      0.964      0.982      0.734
+all        904        915      0.984      0.963      0.983      0.731
+all        904        915      0.978      0.968      0.983       0.73
+all        904        915      0.981      0.968      0.985      0.732
+all        904        915       0.98      0.964      0.984      0.732
+all        904        915      0.984      0.961      0.983      0.732
+all        904        915      0.986      0.964      0.983      0.732
+all        904        915      0.983      0.969      0.983       0.73
+all        904        915      0.984      0.965      0.982      0.728
+all        904        915      0.984      0.962      0.982      0.728
+all        904        915      0.983      0.964      0.982       0.73
+all        904        915      0.982      0.966      0.982       0.73
+all        904        915      0.984      0.962      0.982       0.73
+Closing dataloader mosaic
+all        904        915      0.977      0.968      0.979      0.722
+all        904        915      0.978      0.967      0.977      0.721
+all        904        915      0.984      0.967      0.981      0.727
+all        904        915      0.985      0.968      0.981      0.727
+all        904        915      0.985      0.965      0.981      0.729
+all        904        915      0.981      0.964      0.981      0.729
+all        904        915      0.981      0.967      0.981      0.731
+all        904        915      0.981      0.968      0.981      0.732
+all        904        915      0.981      0.968      0.982      0.734
+all        904        915      0.981      0.968      0.982      0.734
+all        904        915      0.981      0.968      0.982      0.734
+all        904        915      0.981      0.968      0.982      0.735
+all        904        915      0.981      0.968      0.982      0.735
+all        904        915      0.981      0.967      0.982      0.734
+all        904        915      0.981      0.967      0.982      0.735
+all        904        915      0.981      0.966      0.982      0.736
+all        904        915      0.985      0.962      0.982      0.737
+all        904        915      0.987      0.962      0.982      0.736
+all        904        915      0.985      0.962      0.982      0.736
+all        904        915      0.984      0.963      0.982      0.736
+150 epochs completed in 1.152 hours.
+Optimizer stripped from /root/AKCMamba_YOLO/code/runs/detect/tlfo_yolov8s_balanced/weights/last.pt, 22.5MB
+Optimizer stripped from /root/AKCMamba_YOLO/code/runs/detect/tlfo_yolov8s_balanced/weights/best.pt, 22.5MB
+Validating /root/AKCMamba_YOLO/code/runs/detect/tlfo_yolov8s_balanced/weights/best.pt...
+Ultralytics YOLOv8.1.0 🚀 Python-3.10.12 torch-2.5.1+cu121 CUDA:0 (Tesla V100-SXM2-32GB, 32494MiB)
+Model summary (fused): 168 layers, 11127132 parameters, 0 gradients, 28.4 GFLOPs
+all        904        915      0.985      0.962      0.982      0.737
+nest        904        593      0.978      0.967      0.989      0.732
+kite        904        106      0.962      0.962       0.98      0.721
+balloon        904        108          1      0.955      0.984      0.776
+trash        904        108      0.999      0.963      0.975       0.72
+Speed: 0.3ms preprocess, 1.0ms inference, 0.0ms loss, 0.8ms postprocess per image
+Results saved to /root/AKCMamba_YOLO/code/runs/detect/tlfo_yolov8s_balanced
+===== balanced train end 2026年 09月 29日 星期二 19:56:19 CST exit=0 =====

@@ -1,0 +1,9 @@
+path: /root/AKCMamba_YOLO/datasets/tlfo_balanced
+train: images/train
+val: images/val
+
+names:
+  0: nest
+  1: kite
+  2: balloon
+  3: trash
